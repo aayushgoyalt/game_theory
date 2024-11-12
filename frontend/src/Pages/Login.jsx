@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import loginimage from "../assets/login.webp";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -9,11 +10,7 @@ const Login = () => {
   };
   return (
     <div className="flex bg-black w-full justify-center items-center">
-      <img
-        src="./login.webp"
-        className=" border border-white h-[100vh]"
-        alt=""
-      />
+      <img src={loginimage} className=" border border-white h-[100vh]" alt="" />
       <button
         onClick={handleLogin}
         className="z-50 absolute text-4xl mt-[270px]  xl:mt-[300px] px-[170px] py-5 "
