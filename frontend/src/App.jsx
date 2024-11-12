@@ -7,11 +7,13 @@ import "react-toastify/dist/ReactToastify.css"; // Import the CSS for Toastify
 import { ToastContainer } from "react-toastify"; // Import the ToastContainer
 import Rules from "./Pages/Rules";
 import LeaderBoard from "./Pages/LeaderBoard";
+import rulebook from "./Pages/rulebook";
 
 const ProtectedHome = withProtectedRoute(Home);
 const ProtectedSettings = withProtectedRoute(Settings);
 const ProtectedRules = withProtectedRoute(Rules);
 const ProtectedLeaderboard = withProtectedRoute(LeaderBoard);
+const ProtectedRulebook = withProtectedRoute(rulebook);
 
 const App = () => {
   return (
@@ -46,6 +48,14 @@ const App = () => {
             element={
               <>
                 <ProtectedSettings />
+              </>
+            }
+          />
+          <Route
+            path="/k"
+            element={
+              <>
+                <ProtectedRulebook />
               </>
             }
           />
