@@ -1,13 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
   const handleLogin = () => {
-    if (username === validUsername && password === validPassword) {
-      localStorage.setItem("isAuthenticated", "true"); // Save authentication state
-      navigate("/"); // Redirect to the home page on successful login
-    } else {
-      setError("Invalid username or password");
-    }
+    localStorage.setItem("isAuthenticated", "true"); // Save authentication state
+    navigate("/"); // Redirect to the home page on successful login
   };
   return (
     <div className="flex bg-black w-full justify-center items-center">
