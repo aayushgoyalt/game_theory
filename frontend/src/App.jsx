@@ -5,7 +5,6 @@ import Settings from "./Pages/Settings";
 import withProtectedRoute from "./Components/withProtectedRoute"; // Import the HOC
 import "react-toastify/dist/ReactToastify.css"; // Import the CSS for Toastify
 import { ToastContainer } from "react-toastify"; // Import the ToastContainer
-import Rules from "./Pages/Rules";
 import LeaderBoard from "./Pages/LeaderBoard";
 import rulebook from "./Pages/rulebook";
 
