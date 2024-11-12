@@ -58,7 +58,7 @@ const App = () => {
             }
           />
           <Route
-            path="/rules"
+            path="/leaderboard"
             element={
               <>
                 <ProtectedLeaderboard />
