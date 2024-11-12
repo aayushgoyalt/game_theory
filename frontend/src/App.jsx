@@ -7,7 +7,6 @@ import "react-toastify/dist/ReactToastify.css"; // Import the CSS for Toastify
 import { ToastContainer } from "react-toastify"; // Import the ToastContainer
 import Rules from "./Pages/Rules";
 import LeaderBoard from "./Pages/LeaderBoard";
-import Homee from "./Pages/Homee";
 
 const ProtectedHome = withProtectedRoute(Home);
 const ProtectedSettings = withProtectedRoute(Settings);
@@ -39,14 +38,6 @@ const App = () => {
             element={
               <>
                 <ProtectedHome />
-              </>
-            }
-          />
-          <Route
-            path="/h"
-            element={
-              <>
-                <Homee />
               </>
             }
           />
