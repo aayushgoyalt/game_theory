@@ -11,7 +11,6 @@ import rulebook from "./Pages/rulebook";
 
 const ProtectedHome = withProtectedRoute(Home);
 const ProtectedSettings = withProtectedRoute(Settings);
-const ProtectedRules = withProtectedRoute(Rules);
 const ProtectedLeaderboard = withProtectedRoute(LeaderBoard);
 const ProtectedRulebook = withProtectedRoute(rulebook);
 
@@ -52,18 +51,10 @@ const App = () => {
             }
           />
           <Route
-            path="/k"
+            path="/rulebook"
             element={
               <>
                 <ProtectedRulebook />
-              </>
-            }
-          />
-          <Route
-            path="/rules"
-            element={
-              <>
-                <ProtectedRules />
               </>
             }
           />
