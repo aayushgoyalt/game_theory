@@ -1,11 +1,12 @@
 import React from "react";
+import ruleimage from "../assets/rule.png";
 
 function Rulebook() {
   return (
     <>
       <div className="relative h-screen w-full bg-black">
         <img
-          src="../../Public/rule.png"
+          src={ruleimage}
           className="h-full w-full object-cover -ml-1"
           alt="Rulebook"
         />
