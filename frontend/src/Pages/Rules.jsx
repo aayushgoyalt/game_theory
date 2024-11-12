@@ -1,6 +1,30 @@
 import React from "react";
 import "tailwindcss/tailwind.css";
 
+const RulesData = [
+  {
+    id: 1,
+    title: "Rule 1",
+    description: "Always play fair.",
+  },
+  {
+    id: 2,
+    title: "Rule 2",
+    description: "Respect other players.",
+  },
+  {
+    id: 3,
+    title: "Rule 3",
+    description: "Follow the game instructions.",
+  },
+  {
+    id: 4,
+    title: "Rule 4",
+
+    description: "Have fun!",
+  },
+];
+
 const Rules = () => {
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
@@ -9,20 +33,12 @@ const Rules = () => {
           Rulebook
         </h1>
         <ul className="space-y-4">
-          <li className="text-lg text-gray-700">
-            <span className="font-semibold">Rule 1:</span> Always play fair.
-          </li>
-          <li className="text-lg text-gray-700">
-            <span className="font-semibold">Rule 2:</span> Respect other
-            players.
-          </li>
-          <li className="text-lg text-gray-700">
-            <span className="font-semibold">Rule 3:</span> Follow the game
-            instructions.
-          </li>
-          <li className="text-lg text-gray-700">
-            <span className="font-semibold">Rule 4:</span> Have fun!
-          </li>
+          {RulesData.map((rule) => (
+            <li key={rule.id} className="flex items-center">
+              <span className="font-semibold">{rule.title}:</span>
+              <span className="ml-2">{rule.description}</span>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
