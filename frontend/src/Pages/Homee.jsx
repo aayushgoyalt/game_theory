@@ -33,7 +33,7 @@ const Homee = () => {
         alt=""
       />
       <div className="flex justify-center items-center w-full">
-        <div className=" grid grid-cols-3 z-20 gap-5 px-32 h-[65vh] w-full mt-44">
+        <div className=" grid grid-cols-3 z-20 gap-5 px-32 h-[68vh] w-full mt-40">
           <div className="col-span-1 bg-white p-5">
             <h1 className=" font-semibold text-4sxl">Question</h1>
           </div>
@@ -62,7 +62,7 @@ const Homee = () => {
                 </div>
               </div>
               <MonacoEditor
-                className="z-50 h-[40vh]"
+                className="z-50 h-[41vh]"
                 height="100%"
                 language="html"
                 theme="vs-dark"
