@@ -12,7 +12,7 @@ const Login = () => {
   return (
     <div className="flex bg-black w-full justify-center items-center">
       <img
-        src="../../Public/home.webp"
+        src="./login.webp"
         className=" border border-white h-[100vh]"
         alt=""
       />
