@@ -7,8 +7,9 @@ import "react-toastify/dist/ReactToastify.css"; // Import the CSS for Toastify
 import { ToastContainer } from "react-toastify"; // Import the ToastContainer
 import LeaderBoard from "./Pages/LeaderBoard";
 import rulebook from "./Pages/rulebook";
+import Homee from "./Pages/Homee";
 
-const ProtectedHome = withProtectedRoute(Home);
+const ProtectedHome = withProtectedRoute(Homee);
 const ProtectedSettings = withProtectedRoute(Settings);
 const ProtectedLeaderboard = withProtectedRoute(LeaderBoard);
 const ProtectedRulebook = withProtectedRoute(rulebook);
