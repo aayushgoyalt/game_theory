@@ -38,7 +38,7 @@ const Homee = () => {
           <div className="col-span-1 mt-14 bg-white p-5">
             <h1 className=" font-semibold text-4sxl">Question: </h1>
           </div>
-          <div className="col-span-2 ">
+          <div className="col-span-2 flex ">
             <div className="flex flex-col ">
               <div className="flex justify-between">
                 <div></div>

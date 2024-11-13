@@ -6,6 +6,7 @@ import { ToastContainer } from "react-toastify"; // Import the ToastContainer
 import LeaderBoard from "./Pages/LeaderBoard";
 import rulebook from "./Pages/rulebook";
 import Homee from "./Pages/Homee";
+import Stages from "./Pages/Stages";
 
 const ProtectedHome = withProtectedRoute(Homee);
 const ProtectedLeaderboard = withProtectedRoute(LeaderBoard);
