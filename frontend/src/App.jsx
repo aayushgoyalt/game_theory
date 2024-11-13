@@ -17,7 +17,7 @@ const ProtectedStages = withProtectedRoute(Stages);
 
 const App = () => {
   return (
-    <div className="bg-[#050925] w-full h-[100vh]">
+    <div className="bg-[#050925] w-full h-[100vh] select-none">
       <ToastContainer
         position="top-center"
         autoClose={5000}
