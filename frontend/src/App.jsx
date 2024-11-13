@@ -1,18 +1,16 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Login from "./Pages/Login";
-import Settings from "./Pages/Settings";
 import withProtectedRoute from "./Components/withProtectedRoute"; // Import the HOC
 import "react-toastify/dist/ReactToastify.css"; // Import the CSS for Toastify
 import { ToastContainer } from "react-toastify"; // Import the ToastContainer
 import LeaderBoard from "./Pages/LeaderBoard";
 import rulebook from "./Pages/rulebook";
 import Homee from "./Pages/Homee";
-import './index.css';
 
 const ProtectedHome = withProtectedRoute(Homee);
-const ProtectedSettings = withProtectedRoute(Settings);
 const ProtectedLeaderboard = withProtectedRoute(LeaderBoard);
 const ProtectedRulebook = withProtectedRoute(rulebook);
+const ProtectedStages = withProtectedRoute(Stages);
 
 const App = () => {
   return (
@@ -43,10 +41,10 @@ const App = () => {
             }
           />
           <Route
-            path="/settings"
+            path="/stages"
             element={
               <>
-                <ProtectedSettings />
+                <ProtectedStages />
               </>
             }
           />
