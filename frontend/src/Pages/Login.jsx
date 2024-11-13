@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import loginimage from "../assets/login.webp";
 
@@ -17,11 +16,11 @@ const Login = () => {
       />
       <button
         onClick={handleLogin}
-        className="z-50 absolute text-4xl mt-[62vh] translate-x-[-1/2] xl:mt-[64vh] px-[170px] py-5 "
+        className="z-50 absolute text-4xl mt-[62vh] translate-x-[-1/2] xl:mt-[64vh] px-[170px] py-5 poppins pt-8 font-semibold "
       >
         LOG IN
       </button>
-    </div>
+    </div> 
   );
 };
 

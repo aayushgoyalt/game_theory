@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import home from "../assets/editor.png";
 import MonacoEditor from "@monaco-editor/react";
+import LoadingButton from '@mui/lab/LoadingButton';
 import { useNavigate } from "react-router-dom";
 
 const Homee = () => {
@@ -26,16 +27,16 @@ const Homee = () => {
   };
 
   return (
-    <div className=" bg-black min-h-screen overflow-hidden">
+    <div className="bg-black  overflow-y-hidden w-full">
       <img
         src={home}
-        className=" w-full -mt-8 object-cover absolute  -ml-1"
+        className="object-cover absolute top-0 left-0 w-full h-[100vh]"
         alt=""
       />
       <div className="flex justify-center items-center w-full">
-        <div className=" grid grid-cols-3 z-20 gap-5 px-32 h-[68vh] w-full mt-40">
-          <div className="col-span-1 bg-white p-5">
-            <h1 className=" font-semibold text-4sxl">Question</h1>
+        <div className=" grid grid-cols-3 z-20 gap-5 px-32 h-[64vh] w-full mt-56">
+          <div className="col-span-1 mt-14 bg-white p-5">
+            <h1 className=" font-semibold text-4sxl">Question: </h1>
           </div>
           <div className="col-span-2 ">
             <div className="flex flex-col ">
@@ -61,21 +62,26 @@ const Homee = () => {
                   </select>
                 </div>
               </div>
-              <MonacoEditor
-                className="z-50 h-[41vh]"
-                height="100%"
-                language="html"
-                theme="vs-dark"
-                value={code}
-                onChange={handleCodeChange}
-                options={{
-                  automaticLayout: true,
-                  minimap: { enabled: false },
-                  suggestOnTriggerCharacters: true,
-                }}
-              />
+              <div className="mt-3 py-3" style={{backgroundColor:"#1E1E1E"}}> 
+                <MonacoEditor
+                  className="z-50 h-[39vh]"
+                  height="100%"
+                  language="html"
+                  theme="vs-dark"
+                  value={code}
+                  onChange={handleCodeChange}
+                  options={{
+                    automaticLayout: true,
+                    minimap: { enabled: false },
+                    suggestOnTriggerCharacters: true,
+                  }}
+                />
+              </div>
             </div>
-            <div className=" bg-[#1e1e1e] text-white border border-gray-600 p-4 mt-4 h-[23vh]">
+            <LoadingButton variant="contained" sx={{width:0.6}}>
+              Submit
+            </LoadingButton>
+            <div className=" bg-[#1e1e1e] text-white border border-gray-600 p-4 mt-4 h-[14.5vh]">
               asjlsda
             </div>
           </div>

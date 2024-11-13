@@ -1,5 +1,4 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import Home from "./Pages/Home";
 import Login from "./Pages/Login";
 import Settings from "./Pages/Settings";
 import withProtectedRoute from "./Components/withProtectedRoute"; // Import the HOC
@@ -8,6 +7,7 @@ import { ToastContainer } from "react-toastify"; // Import the ToastContainer
 import LeaderBoard from "./Pages/LeaderBoard";
 import rulebook from "./Pages/rulebook";
 import Homee from "./Pages/Homee";
+import './index.css';
 
 const ProtectedHome = withProtectedRoute(Homee);
 const ProtectedSettings = withProtectedRoute(Settings);
