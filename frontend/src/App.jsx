@@ -8,6 +8,8 @@ import rulebook from "./Pages/rulebook";
 import Homee from "./Pages/Homee";
 import Stages from "./Pages/Stages";
 
+import "./index.css";
+
 const ProtectedHome = withProtectedRoute(Homee);
 const ProtectedLeaderboard = withProtectedRoute(LeaderBoard);
 const ProtectedRulebook = withProtectedRoute(rulebook);

@@ -4,6 +4,23 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+	font-family: 'Poppins', sans-serif;
+}
+body{
+	background-image: url('./assets/bg.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 100vh;
+}
+
+.bg22{
+	background-image: url('./assets/bg.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
 
 .poppins{
 	  font-family: 'Poppins', sans-serif;

@@ -1,5 +1,7 @@
-import React from "react";
-import leader from "../assets/leader.png";
+import br from "../assets/leaderboard/Asset 5.png";
+import tl from "../assets/leaderboard/Asset 6.png";
+import leaderboard from "../assets/texts/leaderboard.png";
+import { Stack } from "@mui/material";
 
 const Leaderboard = () => {
   const leaderboardData = [
@@ -11,13 +13,17 @@ const Leaderboard = () => {
   ];
 
   return (
-    <div className="relative bg-black min-h-screen overflow-hidden">
-      {/* Background Image */}
-      <img
-        src={leader}
-        className="w-full h-auto absolute top-0 left-0"
-        alt="Leaderboard Background"
-      />
+    <div className="bg-black  w-full bg22 min-h-[100vh]">
+        <img src={tl} className="absolute top-10 left-8 w-[3%]" alt="" />
+        <img src={br} className="absolute bottom-2 right-6 w-[38%]" alt="" />
+
+        <Stack
+      alignItems="center"
+      justifyContent="center"
+      className="mt-20 mb-6"
+    >
+        <img src={leaderboard} className=" w-[40%]" alt="" />
+      </Stack>
 
       {/* Leaderboard Container */}
       <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 w-3/4 lg:w-2/3 xl:w-1/2 z-10">
