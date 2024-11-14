@@ -4,6 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+	font-family: 'doctorglitch';
+	src: url('./assets/docglitch.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+  
 html{
 	font-family: 'Poppins', sans-serif;
 }
@@ -24,4 +31,7 @@ body{
 
 .poppins{
 	  font-family: 'Poppins', sans-serif;
+}
+.docglitch{
+	font-family: 'doctorglitch' !important;
 }

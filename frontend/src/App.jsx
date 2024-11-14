@@ -36,7 +36,7 @@ const App = () => {
 
           {/* Paths that require the sidebar */}
           <Route
-            path="/play"
+            path="/play/:id"
             element={
               <>
                 <ProtectedHome />

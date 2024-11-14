@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import MonacoEditor from "@monaco-editor/react";
 import LoadingButton from "@mui/lab/LoadingButton";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import tr from "../assets/editor/Asset 2.png";
 import bl from "../assets/editor/Asset 4.png";
@@ -18,10 +18,12 @@ const stageName = {
 };
 
 const Homee = () => {
+
+  const {id} = useParams(); 
   const navigate = useNavigate();
   const [language, setLanguage] = useState("java");
   const [response, setResponse] = useState("");
-  const [stage, setStage] = useState(3);
+  const [stage, setStage] = useState(id);
   const [loading, setLoading] = useState(false);
   const [code, setCode] = useState();
 
@@ -74,11 +76,11 @@ const Homee = () => {
 
   return (
     <div className="bg-black w-full bg22 min-h-[100vh]">
-      <img src={bl} className="absolute bottom-3 left-2 w-[20%]" alt="" />
+      <img src={bl} className="absolute bottom-0 left-2 h-[50%]" alt="" />
       <img src={tr} className="absolute top-3 right-2 w-[20%]" alt="" />
       <Stack alignItems="center" justifyContent="center" className="mt-20 mb-6">
         <img
-          src={stage === 1 ? stage1 : stage === 2 ? stage2 : stage3}
+          src={stage == 1 ? stage1 : stage == 2 ? stage2 : stage3}
           className="w-[26%]"
           alt=""
         />
