@@ -53,8 +53,8 @@ function Rulebook() {
         opacity: 0,
         duration: 0.5,
         onComplete: () => {
-          setContentIndex((prevIndex) =>
-            (prevIndex - 1 + content.length) % content.length
+          setContentIndex(
+            (prevIndex) => (prevIndex - 1 + content.length) % content.length
           );
           gsap.fromTo(
             [whiteDivRef.current, pinkDivRef.current],
@@ -79,21 +79,21 @@ function Rulebook() {
       <div className="absolute top-[205px] left-1/2 transform -translate-x-1/2 flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-8">
         <button
           onClick={handlePrevious}
-          className="absolute left-[-40px] text-white text-3xl lg:text-4xl transform -translate-y-1/2 top-1/2 hover:text-gray-400"
+          className="absolute p-6 left-[-40px] text-white text-3xl lg:text-4xl transform -translate-y-1/2 top-1/2 hover:text-gray-400"
         >
           <FontAwesomeIcon icon={faArrowLeft} />
         </button>
 
         <div
           ref={whiteDivRef}
-          className="bg-white w-[90%] sm:w-[70%] md:w-[600px] lg:w-[500px] xl:w-[600px] h-[400px] md:h-[500px] lg:h-[550px] xl:h-[550px] border shadow-md rounded-lg"
+          className="bg-white p-6 w-[90%] sm:w-[70%] md:w-[600px] lg:w-[500px] xl:w-[600px] h-[400px] md:h-[500px] lg:h-[550px] xl:h-[550px] border shadow-md rounded-lg"
         >
           {content[contentIndex].white}
         </div>
 
         <div
           ref={pinkDivRef}
-          className="bg-pink-500 w-[90%] sm:w-[70%] md:w-[500px] lg:w-[400px] xl:w-[500px] h-[400px] md:h-[500px] lg:h-[550px] xl:h-[550px] border shadow-md rounded-lg"
+          className="bg-pink-500 p-6 w-[90%] sm:w-[70%] md:w-[500px] lg:w-[400px] xl:w-[500px] h-[400px] md:h-[500px] lg:h-[550px] xl:h-[550px] border shadow-md rounded-lg"
         >
           {content[contentIndex].pink}
         </div>
