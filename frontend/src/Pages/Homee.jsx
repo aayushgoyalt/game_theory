@@ -42,7 +42,7 @@ const Homee = () => {
 
   return (
     <div className="bg-black  w-full bg22 min-h-[100vh]">
-      <img src={bl} className="absolute bottom-3 left-2 w-[20%]" alt="" />
+      <img src={bl} className="absolute bottom-0 left-1 h-[50%]" alt="" />
       <img src={tr} className="absolute top-3 right-2 w-[20%]" alt="" />
       <Stack
       alignItems="center"
