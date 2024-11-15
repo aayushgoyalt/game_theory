@@ -1,20 +1,21 @@
 import React from "react";
-import { Navigate } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 
-// Higher Order Component for protected routes
-const withProtectedRoute = (WrappedComponent) => {
-  return (props) => {
-    // Replace this with your actual authentication logic
-    const isAuthenticated = localStorage.getItem("isAuthenticated") === "true";
+const ProtectedRoute = ({ component: Component, ...rest }) => {
+  const isAuthenticated = !!localStorage.getItem("token"); // Check if JWT token exists in localStorage
 
-    // If the user is not authenticated, redirect to login
-    if (!isAuthenticated) {
-      return <Navigate to="/login" />;
-    }
-
-    // If authenticated, render the wrapped component
-    return <WrappedComponent {...props} />;
-  };
+  return (
+    <Route
+      {...rest}
+      render={(props) =>
+        isAuthenticated ? (
+          <Component {...props} />
+        ) : (
+          <Redirect to="/login" /> // Redirect to login page if not authenticated
+        )
+      }
+    />
+  );
 };
 
-export default withProtectedRoute;
+export default ProtectedRoute;

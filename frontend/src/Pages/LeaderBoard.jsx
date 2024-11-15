@@ -2,26 +2,43 @@ import br from "../assets/leaderboard/Asset 5.png";
 import tl from "../assets/leaderboard/Asset 6.png";
 import leaderboard from "../assets/texts/leaderboard.png";
 import { Stack } from "@mui/material";
+import { useEffect, useState } from "react";
 
 const Leaderboard = () => {
-  const leaderboardData = [
-    { rank: "1st", teamName: "Team Alpha", score: 250 },
-    { rank: "2nd", teamName: "Team Beta", score: 200 },
-    { rank: "3rd", teamName: "Team Gamma", score: 180 },
-    { rank: "4th", teamName: "Team Delta", score: 150 },
-    { rank: "5th", teamName: "Team Epsilon", score: 120 },
-  ];
+  const [leaderboardData, setLeaderboardData] = useState([]);
+
+  useEffect(() => {
+    const dataLao = async () => {
+      const response = await fetch("http://localhost:8080/leaderboard", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const data = await response.json();
+      setLeaderboardData(data);
+    };
+
+    dataLao();
+    const interval = setInterval(() => {
+      dataLao();
+    }, 30000);
+    return () => clearInterval(interval);
+  }, []);
+  // const leaderboardData = [
+  //   { rank: "1st", teamName: "Team Alpha", score: 250 },
+  //   { rank: "2nd", teamName: "Team Beta", score: 200 },
+  //   { rank: "3rd", teamName: "Team Gamma", score: 180 },
+  //   { rank: "4th", teamName: "Team Delta", score: 150 },
+  //   { rank: "5th", teamName: "Team Epsilon", score: 120 },
+  // ];
 
   return (
     <div className="bg-black  w-full bg22 min-h-[100vh]">
-        <img src={tl} className="absolute top-10 left-8 w-[3%]" alt="" />
-        <img src={br} className="absolute bottom-2 right-6 w-[38%]" alt="" />
+      <img src={tl} className="absolute top-10 left-8 w-[3%]" alt="" />
+      <img src={br} className="absolute bottom-2 right-6 w-[38%]" alt="" />
 
-        <Stack
-      alignItems="center"
-      justifyContent="center"
-      className="mt-20 mb-6"
-    >
+      <Stack alignItems="center" justifyContent="center" className="mt-20 mb-6">
         <img src={leaderboard} className=" w-[40%]" alt="" />
       </Stack>
 
@@ -60,8 +77,8 @@ const Leaderboard = () => {
             />
 
             {/* Row Content */}
-            <span className="z-50">{item.rank}</span>
-            <span className="z-50">{item.teamName}</span>
+            <span className="z-50">{index + 1}</span>
+            <span className="z-50">{item.id}</span>
             <span className="z-50">{item.score}</span>
           </div>
         ))}

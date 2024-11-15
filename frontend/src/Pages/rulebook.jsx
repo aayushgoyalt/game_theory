@@ -3,6 +3,7 @@ import ruleimage from "../assets/rule.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { gsap } from "gsap";
+import Navbar from "../Components/Navbar";
 
 function Rulebook() {
   const [contentIndex, setContentIndex] = useState(0);
@@ -105,6 +106,7 @@ function Rulebook() {
           <FontAwesomeIcon icon={faArrowRight} />
         </button>
       </div>
+      <Navbar />
     </>
   );
 }
