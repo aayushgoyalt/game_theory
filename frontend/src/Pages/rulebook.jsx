@@ -45,11 +45,11 @@ In Round 2, each corporation is no longer limited to simple choices. Instead, th
 innovation, security, diplomacy, and economic expansion. 
 
 Each team now has four possible actions, each representing a significant corporate decision that could lead to either dominance or downfall.
-`,
-      pink: `Base Scores:
-+10 points: Awarded to both teams each round.
 
-Bonus Points:
+Base Scores:
++10 points: Awarded to both teams each round.
+`,
+      pink: `Bonus Points:
 Diverse Choices: Teams earn a +20 bonus if they select each option (Military, Diplomacy, Economy, Espionage) exactly 5 times each over the 20 rounds.
 Espionage/Diplomacy Advantage: Teams earn a +10 bonus if they select Espionage or Diplomacy more times than their opponent by the end of the rounds.
 Economy/Military Advantage: Teams earn a +5 bonus if they select Economy or Military more times than their opponent by the end of the rounds.
